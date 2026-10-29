@@ -184,19 +184,15 @@ if __name__ == "__main__":
         turn_to(auv, course1, yaw_pd, depth_pd, DEPTH, log)
 
         print("Удержание курса 1")
-
         m1 = hold_course(auv, course1, HOLD_TIME, CRUISE, yaw_pd, depth_pd, DEPTH, log)
 
         print("Поворот на курс 2")
-
         turn_to(auv, course2, yaw_pd, depth_pd, DEPTH, log)
 
         print("Движение по курсу 2")
-
         m2 = hold_course(auv, course2, HOLD_TIME, CRUISE, yaw_pd, depth_pd, DEPTH, log)
 
         stop(auv)
-
         print("Готово")
 
     finally:
