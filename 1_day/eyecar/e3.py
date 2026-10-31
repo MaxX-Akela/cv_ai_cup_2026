@@ -18,11 +18,17 @@ ROUTE_E3 = [
 
 
 def setup_gpio():
+
+
     os.system("sudo pigpiod")
+
     time.sleep(1)
+
     ESC = 17
     STEER = 18
+    
     pi = pigpio.pi()
+
     pi.set_servo_pulsewidth(ESC, 0)
     pi.set_servo_pulsewidth(STEER, 0)
     time.sleep(1)
